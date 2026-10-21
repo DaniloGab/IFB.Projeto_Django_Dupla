@@ -12,5 +12,3 @@ class FilmesViewSet(viewsets.ModelViewSet):
     serializer_class = FilmesSerializer
     filter_backends = [DjangoFilterBackend]  # habilita filtragem via django-filter
     filterset_fields = ['titulo', 'descricao', 'ano_lancamento', 'genero', 'duracao']
-
-
