@@ -10,7 +10,7 @@ class Filmes(models.Model):
     titulo = models.CharField(max_length = 255)
     descricao = models.TextField()
     ano_lancamento = models.PositiveIntegerField()
-    genero = models.ForeignKey(Generos)   # chave estrangeira para tabela generos
+    genero = models.ForeignKey(Generos, on_delete=models.CASCADE)   # chave estrangeira para tabela generos
     duracao = models.PositiveIntegerField()
 
     def __str__(self):
